@@ -10,19 +10,19 @@ import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.*;
 
 public class CreditPage {
-    private SelenideElement confirmButton = $(withText("Продолжить"));
-    private SelenideElement cardNumberField = $("[class=input__control]");
-    private SelenideElement monthField = $$("[class=input__control]").get(1);
-    private SelenideElement yearField = $$("[class=input__control]").get(2);
-    private SelenideElement cardHolderField = $$("[class=input__control]").get(3);
-    private SelenideElement codeField = $$("[class=input__control]").get(4);
-    private SelenideElement heading = $(withText("Кредит по данным карты"));
+    private static SelenideElement confirmButton = $(withText("Продолжить"));
+    private static SelenideElement cardNumberField = $("[class=input__control]");
+    private static SelenideElement monthField = $(withText("Месяц")).parent().$(".input__control");
+    private static SelenideElement yearField = $(withText("Год")).parent().$(".input__control");
+    private static SelenideElement cardHolderField = $(withText("Владелец")).parent().$(".input__control");
+    private static SelenideElement codeField = $(withText("CVC/CVV")).parent().$(".input__control");
+    private static SelenideElement heading = $(withText("Кредит по данным карты"));
 
-    private SelenideElement cardNumberErrorField = $(withText("Номер карты")).parent().$("[class=input__sub]");
-    private SelenideElement monthErrorField = $(withText("Месяц")).parent().$("[class=input__sub]");
-    private SelenideElement yearErrorField = $(withText("Год")).parent().$("[class=input__sub]");
-    private SelenideElement cvcErrorField = $(withText("CVC/CVV")).parent().$("[class=input__sub]");
-    private SelenideElement cardHolderErrorField = $(withText("Владелец")).parent().$("[class=input__sub]");
+    private static SelenideElement cardNumberErrorField = $(withText("Номер карты")).parent().$("[class=input__sub]");
+    private static SelenideElement monthErrorField = $(withText("Месяц")).parent().$("[class=input__sub]");
+    private static SelenideElement yearErrorField = $(withText("Год")).parent().$("[class=input__sub]");
+    private static SelenideElement cvcErrorField = $(withText("CVC/CVV")).parent().$("[class=input__sub]");
+    private static SelenideElement cardHolderErrorField = $(withText("Владелец")).parent().$("[class=input__sub]");
 
     public CreditPage() {
         heading.shouldBe(Condition.visible);

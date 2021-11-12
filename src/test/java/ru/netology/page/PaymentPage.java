@@ -12,10 +12,10 @@ import static org.openqa.selenium.Keys.DELETE;
 public class PaymentPage {
     private static SelenideElement confirmButtonField = $(withText("Продолжить"));
     private static SelenideElement cardNumberField = $("[class=input__control]");
-    private static SelenideElement monthField = $$("[class=input__control]").get(1);
-    private static SelenideElement yearField = $$("[class=input__control]").get(2);
-    private static SelenideElement cardHolderField = $$("[class=input__control]").get(3);
-    private static SelenideElement codeField = $$("[class=input__control]").get(4);
+    private static SelenideElement monthField = $(withText("Месяц")).parent().$(".input__control");
+    private static SelenideElement yearField = $(withText("Год")).parent().$(".input__control");
+    private static SelenideElement cardHolderField = $(withText("Владелец")).parent().$(".input__control");
+    private static SelenideElement codeField = $(withText("CVC/CVV")).parent().$(".input__control");
 
     private static SelenideElement heading = $(withText("Оплата по карте"));
     private static SelenideElement cardNumberErrorField = $(withText("Номер карты")).parent().$("[class=input__sub]");
