@@ -64,52 +64,42 @@ public class CreditPage {
     }
 
     public void emptyCardHolderFieldMessage() {
-        cardHolderErrorField.shouldBe(Condition.visible,
-                Duration.ofSeconds(14)).shouldHave(Condition.exactText("Поле обязательно для заполнения"));
+        cardHolderErrorField.shouldBe(Condition.visible).shouldHave(Condition.exactText("Поле обязательно для заполнения"));
     }
 
     public void failedCreditCardHolderMessage() {
-        cardHolderErrorField.shouldBe(Condition.visible,
-                Duration.ofSeconds(14)).shouldHave(Condition.exactText("Неверный формат"));
+        cardHolderErrorField.shouldBe(Condition.visible).shouldHave(Condition.exactText("Неверный формат"));
     }
 
     public void fieldErrorWhenValueCannotBeLong() {
-        cardHolderErrorField.shouldBe(Condition.visible,
-                Duration.ofSeconds(14)).shouldHave(Condition.exactText("Поле может содержать не более 30 символов"));
+        cardHolderErrorField.shouldBe(Condition.visible).shouldHave(Condition.exactText("Поле может содержать не более 30 символов"));
     }
 
     public void failedCreditCardNumberField() {
-        cardNumberErrorField.shouldBe(Condition.visible,
-                Duration.ofSeconds(14)).shouldHave(Condition.exactText("Неверный формат"));
+        cardNumberErrorField.shouldBe(Condition.visible).shouldHave(Condition.exactText("Неверный формат"));
     }
 
     public void failedCreditCardMonthField() {
-        monthErrorField.shouldBe(Condition.visible,
-                Duration.ofSeconds(14)).shouldHave(Condition.exactText("Неверно указан срок действия карты"));
+        monthErrorField.shouldBe(Condition.visible).shouldHave(Condition.exactText("Неверно указан срок действия карты"));
     }
 
     public void wrongCreditCardMonthField() {
-        monthErrorField.shouldBe(Condition.visible,
-                Duration.ofSeconds(14)).shouldHave(Condition.exactText("Неверный формат"));
+        monthErrorField.shouldBe(Condition.visible).shouldHave(Condition.exactText("Неверный формат"));
     }
 
     public void wrongCreditCardYearField() {
-        yearErrorField.shouldBe(Condition.visible,
-                Duration.ofSeconds(14)).shouldHave(Condition.exactText("Неверно указан срок действия карты"));
+        yearErrorField.shouldBe(Condition.visible).shouldHave(Condition.exactText("Неверно указан срок действия карты"));
     }
 
     public void failedCreditCardYearField() {
-        yearErrorField.shouldBe(Condition.visible,
-                Duration.ofSeconds(14)).shouldHave(Condition.exactText("Истёк срок действия карты"));
+        yearErrorField.shouldBe(Condition.visible).shouldHave(Condition.exactText("Истёк срок действия карты"));
     }
 
     public void emptyCreditCardYearField() {
-        yearErrorField.shouldBe(Condition.visible,
-                Duration.ofSeconds(14)).shouldHave(Condition.exactText("Неверный формат"));
+        yearErrorField.shouldBe(Condition.visible).shouldHave(Condition.exactText("Неверный формат"));
     }
 
     public void failedCreditCardCvcField() {
-        cvcErrorField.shouldBe(Condition.visible,
-                Duration.ofSeconds(14)).shouldHave(Condition.exactText("Неверный формат"));
+        cvcErrorField.shouldBe(Condition.visible).shouldHave(Condition.exactText("Неверный формат"));
     }
 }
