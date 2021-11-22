@@ -66,7 +66,7 @@ public class CreditGateTest {
         creditPage.failedCreditCardNumberField();
         creditPage.wrongCreditCardMonthField();
         creditPage.emptyCreditCardYearField();
-        creditPage.failedCreditCardHolderMessage();
+        creditPage.emptyCardHolderFieldMessage();
         creditPage.failedCreditCardCvcField();
     }
 
